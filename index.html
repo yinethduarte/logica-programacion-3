@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factorial</title>
+  </head>
+  <body>
+    <script>
+      function solicitarNumero() {
+        let numero = Number(prompt("Ingrese un número"));
+        while (isNaN(numero)) {
+          alert("Por favor, ingrese un número válido.");
+          numero = Number(prompt("Ingrese un número"));
+        }
+        return numero;
+      }
+
+      function factorial(numero) {
+        return numero > 1 ? numero * factorial(numero - 1) : 1;
+      }
+
+      let numero = solicitarNumero();
+      alert(`El factorial de ${numero} es ${factorial(numero)}`);
+    </script>
+  </body>
+</html>
